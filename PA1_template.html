@@ -164,9 +164,9 @@ plot(x = fiveMinInt$interval, y=fiveMinInt$steps, type = &quot;l&quot;, xlab=&qu
 <p>Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the ata. This section does the following:</p>
 <ol style="list-style-type: decimal">
 <li>Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)</li>
-<li>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.</li>
+<li>‘NA’ values are imputed by taking the mean of 5-minute interval for all days and then substitue then for ‘NA’ values.</li>
 <li>Create a new dataset that is equal to the original dataset but with the missing data filled in.</li>
-<li>Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</li>
+<li>Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. The changes in the mean and median is shown below.</li>
 </ol>
 <pre class="r"><code>missingValues = sum(!complete.cases(data))
 fdata = data
