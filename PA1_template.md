@@ -15,7 +15,7 @@ if (!file.exists("activity.csv")) {
     unzip(zipfile = "activity.zip")
 }
 data = read.csv("activity.csv")
-data$date = as.Date(data$date)
+data$date = as.Date(data$date) 
 cdata = na.omit(data)
 ```
 ## What is mean total number of steps taken per day?
@@ -153,6 +153,9 @@ Number of missing values in teh dataset = 2304
 ####After imputing the missing values:
 MEAN - Number of steps per day = 10766  
 MEDIAN - Number of steps per day = 10762
+
+Imputing the NA valuse have no effect on the median values but the median has reduced 
+by 3 steps.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 Use the dataset with the filled-in missing values for this part.

@@ -68,7 +68,7 @@ if (!file.exists(&quot;activity.csv&quot;)) {
     unzip(zipfile = &quot;activity.zip&quot;)
 }
 data = read.csv(&quot;activity.csv&quot;)
-data$date = as.Date(data$date)
+data$date = as.Date(data$date) 
 cdata = na.omit(data)</code></pre>
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
@@ -185,6 +185,7 @@ plot(x = istepsInDay$Date, y = istepsInDay$Steps, type = &quot;h&quot;, xlab= &q
 <div id="after-imputing-the-missing-values" class="section level4">
 <h4>After imputing the missing values:</h4>
 <p>MEAN - Number of steps per day = 10766<br />MEDIAN - Number of steps per day = 10762</p>
+<p>Imputing the NA valuse have no effect on the median values but the median has reduced by 3 steps.</p>
 </div>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
